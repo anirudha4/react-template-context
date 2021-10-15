@@ -1,9 +1,11 @@
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import For from "@components/common/For"
-import { routeConfig } from "@/route.config"
+import { routeConfig } from "./route.config"
+import Navbar from '@components/common/Navbar';
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <For 
         Parent={props => <Switch {...props} />}
         items={Object.keys(routeConfig)}
