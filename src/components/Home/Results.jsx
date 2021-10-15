@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import For from '@components/common/For'
-import { Title } from '@components/custom'
-import { colors } from '@themes'
+import For from '@components/common/For';
+import Repo from './Repo';
+import { Title } from '@components/custom';
+import { colors } from '@themes';
 
 const Grid = styled.div``;
 
@@ -15,7 +16,7 @@ export default function Results({ results }) {
                 items={results}
                 Parent={Grid}
                 renderItem={item => (
-                    <div>{item}</div>
+                    <Repo item={item}/>
                 )}
             />
         </>

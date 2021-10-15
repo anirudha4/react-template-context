@@ -1,22 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Searchbar from './Searchbar'
 import Results from './Results'
-import { Card, Container, Line, Space } from '@components/custom'
+import { Card, Container, Line, Space, Button } from '@components/custom'
 
 
-export default function Home({ results }) {
+export default function Home({ state }) {
+    const { results, loading, getGithubRepositories } = state;
+    const [search, setSearch] = useState();
     const handleChange = e => {
-        console.log(e.target.value);
+        setSearch(e.target.value)
+    }
+    const handleClick = e => {
+        if(search) 
+            getGithubRepositories(search)
     }
     return (
         <Container>
             <Space top="2em" bottom="1em" />
             <Card>
-                <Searchbar onChange={handleChange} />
+                <Searchbar onChange={handleChange} value={search} />
+                <Space top="1em" />
+                <Button disabled={loading || !search} onClick={handleClick}>{loading ? 'Searching' : 'Search'}</Button>
                 <Space top="2em" />
                 <Line />
                 <Space top="2em" />
-                <Results results={results} />
+                <Results search={search} results={results} />
             </Card>
         </Container>
     )
