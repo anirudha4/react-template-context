@@ -1,10 +1,10 @@
 import React from 'react'
 import Searchbar from './Searchbar'
 import Results from './Results'
-import { Card, Container, Line, Space, Title } from '@components/custom'
+import { Card, Container, Line, Space } from '@components/custom'
 
 
-export default function Home() {
+export default function Home({ results }) {
     const handleChange = e => {
         console.log(e.target.value);
     }
@@ -16,7 +16,7 @@ export default function Home() {
                 <Space top="2em" />
                 <Line />
                 <Space top="2em" />
-                <Results results={[]} />
+                <Results results={results} />
             </Card>
         </Container>
     )
