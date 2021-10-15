@@ -1,8 +1,9 @@
+import { colors } from '@/themes'
 import React from 'react'
 
 export default function Home() {
     return (
-        <div>
+        <div style={{ color: colors.primary }}>
             Home Component
         </div>
     )
