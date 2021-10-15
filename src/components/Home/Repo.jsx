@@ -64,7 +64,7 @@ export default function Repo({ item }) {
                     <Space top="1em" />
                     <FlexBetween>
                         <p>{item.name}</p>
-                        <ButtonLink href={item.html_url}>
+                        <ButtonLink target="_blank" href={item.html_url}>
                             <FeatherIcon icon="arrow-right" size="16" />
                         </ButtonLink>
                     </FlexBetween>
