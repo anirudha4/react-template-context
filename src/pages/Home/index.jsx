@@ -3,10 +3,10 @@ import Component from '@components/Home'
 import { useStore } from './selectors'
 
 export default function Home() {
-    const { results } = useStore();
+    const state = useStore();
     return (
         <>
-            <Component results={results} />
+            <Component state={state} />
         </>
     )
 }

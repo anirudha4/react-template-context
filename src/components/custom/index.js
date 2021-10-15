@@ -15,6 +15,7 @@ export const Space = styled.div`
 export const Container = styled.div`
     max-width: ${styles.maxWidth};
     margin: 0 auto;
+    padding: 0 1em;
 `;
 export const FlexBetween = styled.div`
     ${flexConfig('space-between', 'center')};
@@ -27,14 +28,13 @@ export const Card = styled.div`
     background-color: ${colors.white};
     border-radius: ${styles.borderRadius};
     box-shadow: ${styles.boxShadow};
-
-    strong.title {
-        display: block;
-        font-size: ${fonts.fontLarge};
-        color: ${colors.text};
-        font-weight: ${fonts.weight.bold};
-    }
 `;
+
+export const BorderedCard = styled(Card)`
+    box-shadow: initial;
+    border: 2px solid ${colors.greyLight};
+`;
+
 export const Input = styled.input`
     width: 100%;
     padding: 1em 1.3em;
@@ -54,5 +54,29 @@ export const Line = styled.div`
 `;
 
 export const Title = styled.h3`
+    margin-bottom: .3em;
+`;
+export const Subtitle = styled.h6`
+    color: ${colors.grey};
+`;
 
+export const Button = styled.button`
+    padding: 1em 1.3em;
+    border: none;
+    outline: none;
+    background-color: ${colors.primary};
+    color: ${colors.white};
+    font-weight: ${fonts.weight.bold};
+    border-radius: ${styles.borderRadius};
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: ${styles.boxShadow};
+    &:hover {
+        background-color: ${colors.primaryDark};
+    }
+    &:disabled {
+        background-color: ${colors.greyLight};
+        color: ${colors.grey};
+        cursor: not-allowed;
+    }
 `;

@@ -4,7 +4,7 @@ import Input from '@components/custom/Input'
 export default function Searchbar({ onChange }) {
     return (
         <>
-            <Input w100 type="text" onChange={onChange} placeholder="Search for github repositories" />
+            <Input type="text" onChange={onChange} placeholder="Search for github repositories" />
         </>
     )
 }
