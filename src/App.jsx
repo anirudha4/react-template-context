@@ -1,7 +1,6 @@
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import For from "@components/common/For"
 import { routeConfig } from "@/route.config"
-
 function App() {
   return (
     <BrowserRouter>
