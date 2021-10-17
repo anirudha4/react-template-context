@@ -1,12 +1,12 @@
 import React from 'react'
 import Component from '@components/Home'
-import { useStore } from './selectors'
+import { withContext } from '@components/hoc';
 
-export default function Home() {
-    const state = useStore();
+function Home({ home }) {
     return (
         <>
-            <Component state={state} />
+            <Component home={home} />
         </>
     )
 }
+export default withContext(Home)

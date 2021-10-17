@@ -4,8 +4,8 @@ import Results from './Results'
 import { Card, Container, Line, Space, Button } from '@components/custom'
 
 
-export default function Home({ state }) {
-    const { results, loading, getGithubRepositories } = state;
+export default function Home({ home }) {
+    const { results, loading, getGithubRepositories } = home;
     const [search, setSearch] = useState();
     const handleChange = e => {
         setSearch(e.target.value)

@@ -13,7 +13,7 @@ export default function HomeStoreProvider({ children }) {
         const data = await getRepos(payload);
         setState({...state, loading: false, results: data})
     }
-    const values = {...state, getGithubRepositories}
+    const values = {...state, getGithubRepositories }
     return (
         <HomeStoreContext.Provider value={values}>
             { children }            
