@@ -1,12 +1,12 @@
 import React from 'react'
-import Component from '@components/Home'
 import { withContext } from '@components/hoc';
+import { Card, Container } from '@components/custom';
 
 function Home({ home }) {
     return (
-        <>
-            <Component home={home} />
-        </>
-    )
+        <Container>
+        Home
+        </Container>
+     )
 }
-export default withContext(Home)
+export default withContext(Home, ['home', 'todos'])

@@ -33,13 +33,7 @@ export default function Navbar() {
         <NavContainer>
             <Container>
                 <FlexBetween>
-                    <Logo to="/">
-                        <img width="120" src={logo} alt="logo" />
-                    </Logo>
-                    <Links>
-                        <Link exact to="/">Home</Link>
-                        <Link to="/about">About</Link>
-                    </Links>
+                    Navbar
                 </FlexBetween>
             </Container>
         </NavContainer>

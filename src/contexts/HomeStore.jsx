@@ -6,6 +6,8 @@ const initialState = {
     results: [],
     loading: false
 }
+
+
 export default function HomeStoreProvider({ children }) {
     const [state, setState] = useState(initialState);
     const getGithubRepositories = async (payload) => {
